@@ -22,6 +22,6 @@ namespace coremvc
                 .UseKestrel() 
 				.UseUrls("http://*:80") 
 				.UseContentRoot(Directory.GetCurrentDirectory()) 
-				.UseStartup<Startup>() 
+				.UseStartup<Startup>();
     }
 }
