@@ -19,6 +19,9 @@ namespace coremvc
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseKestrel() 
+				.UseUrls("http://*:80") 
+				.UseContentRoot(Directory.GetCurrentDirectory()) 
+				.UseStartup<Startup>() 
     }
 }
